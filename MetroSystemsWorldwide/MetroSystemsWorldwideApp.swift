@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MetroSystemsWorldwideApp: App {
+    @StateObject private var metroSystemManager = MetroSystemManager()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(metroSystemManager)
         }
     }
 }

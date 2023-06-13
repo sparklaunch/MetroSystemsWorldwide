@@ -11,6 +11,9 @@
 		90D345DA2A385C2F009EA5A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D345D92A385C2F009EA5A4 /* ContentView.swift */; };
 		90D345DC2A385C30009EA5A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D345DB2A385C30009EA5A4 /* Assets.xcassets */; };
 		90D345E02A385C30009EA5A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D345DF2A385C30009EA5A4 /* Preview Assets.xcassets */; };
+		90D345E92A385CB9009EA5A4 /* MetroSystemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D345E82A385CB9009EA5A4 /* MetroSystemManager.swift */; };
+		90D345EB2A385CE5009EA5A4 /* MetroSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D345EA2A385CE5009EA5A4 /* MetroSystem.swift */; };
+		90D345ED2A385D1C009EA5A4 /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 90D345EC2A385D1C009EA5A4 /* data.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		90D345DB2A385C30009EA5A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90D345DD2A385C30009EA5A4 /* MetroSystemsWorldwide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MetroSystemsWorldwide.entitlements; sourceTree = "<group>"; };
 		90D345DF2A385C30009EA5A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		90D345E82A385CB9009EA5A4 /* MetroSystemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroSystemManager.swift; sourceTree = "<group>"; };
+		90D345EA2A385CE5009EA5A4 /* MetroSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroSystem.swift; sourceTree = "<group>"; };
+		90D345EC2A385D1C009EA5A4 /* data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,7 @@
 		90D345D62A385C2F009EA5A4 /* MetroSystemsWorldwide */ = {
 			isa = PBXGroup;
 			children = (
+				90D345E72A385C9F009EA5A4 /* Models */,
 				90D345E62A385C44009EA5A4 /* Views */,
 				90D345D72A385C2F009EA5A4 /* MetroSystemsWorldwideApp.swift */,
 				90D345DB2A385C30009EA5A4 /* Assets.xcassets */,
@@ -75,6 +82,16 @@
 				90D345D92A385C2F009EA5A4 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		90D345E72A385C9F009EA5A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90D345EC2A385D1C009EA5A4 /* data.csv */,
+				90D345E82A385CB9009EA5A4 /* MetroSystemManager.swift */,
+				90D345EA2A385CE5009EA5A4 /* MetroSystem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +154,7 @@
 			files = (
 				90D345E02A385C30009EA5A4 /* Preview Assets.xcassets in Resources */,
 				90D345DC2A385C30009EA5A4 /* Assets.xcassets in Resources */,
+				90D345ED2A385D1C009EA5A4 /* data.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90D345EB2A385CE5009EA5A4 /* MetroSystem.swift in Sources */,
 				90D345DA2A385C2F009EA5A4 /* ContentView.swift in Sources */,
+				90D345E92A385CB9009EA5A4 /* MetroSystemManager.swift in Sources */,
 				90D345D82A385C2F009EA5A4 /* MetroSystemsWorldwideApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
