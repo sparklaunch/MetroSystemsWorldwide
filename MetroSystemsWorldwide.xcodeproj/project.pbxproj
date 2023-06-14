@@ -15,6 +15,8 @@
 		90D345EB2A385CE5009EA5A4 /* MetroSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D345EA2A385CE5009EA5A4 /* MetroSystem.swift */; };
 		90D345ED2A385D1C009EA5A4 /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 90D345EC2A385D1C009EA5A4 /* data.csv */; };
 		90D345EF2A397007009EA5A4 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D345EE2A397007009EA5A4 /* CategoryButton.swift */; };
+		90D345F12A39741C009EA5A4 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D345F02A39741C009EA5A4 /* CountryView.swift */; };
+		90D345F42A39775E009EA5A4 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D345F32A39775E009EA5A4 /* CountryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		90D345EA2A385CE5009EA5A4 /* MetroSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroSystem.swift; sourceTree = "<group>"; };
 		90D345EC2A385D1C009EA5A4 /* data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
 		90D345EE2A397007009EA5A4 /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
+		90D345F02A39741C009EA5A4 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
+		90D345F32A39775E009EA5A4 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		90D345D62A385C2F009EA5A4 /* MetroSystemsWorldwide */ = {
 			isa = PBXGroup;
 			children = (
+				90D345F22A397751009EA5A4 /* ViewModels */,
 				90D345E72A385C9F009EA5A4 /* Models */,
 				90D345E62A385C44009EA5A4 /* Views */,
 				90D345D72A385C2F009EA5A4 /* MetroSystemsWorldwideApp.swift */,
@@ -83,6 +88,7 @@
 			children = (
 				90D345D92A385C2F009EA5A4 /* ContentView.swift */,
 				90D345EE2A397007009EA5A4 /* CategoryButton.swift */,
+				90D345F02A39741C009EA5A4 /* CountryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -95,6 +101,14 @@
 				90D345EA2A385CE5009EA5A4 /* MetroSystem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		90D345F22A397751009EA5A4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				90D345F32A39775E009EA5A4 /* CountryViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,7 +185,9 @@
 				90D345EB2A385CE5009EA5A4 /* MetroSystem.swift in Sources */,
 				90D345EF2A397007009EA5A4 /* CategoryButton.swift in Sources */,
 				90D345DA2A385C2F009EA5A4 /* ContentView.swift in Sources */,
+				90D345F12A39741C009EA5A4 /* CountryView.swift in Sources */,
 				90D345E92A385CB9009EA5A4 /* MetroSystemManager.swift in Sources */,
+				90D345F42A39775E009EA5A4 /* CountryViewModel.swift in Sources */,
 				90D345D82A385C2F009EA5A4 /* MetroSystemsWorldwideApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

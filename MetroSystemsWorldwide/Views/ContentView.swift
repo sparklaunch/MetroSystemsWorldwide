@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject private var metroSystemManager: MetroSystemManager
     var body: some View {
         NavigationView {
             ScrollView {
@@ -20,7 +19,7 @@ struct ContentView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 NavigationLink {
-
+                                    CountryView()
                                 } label: {
                                     CategoryButton(label: "Country", systemName: "globe.asia.australia.fill", color: .blue)
                                 }
@@ -48,6 +47,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(MetroSystemManager())
     }
 }

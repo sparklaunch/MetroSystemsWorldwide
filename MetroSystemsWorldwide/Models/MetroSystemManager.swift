@@ -9,6 +9,11 @@ import SwiftUI
 
 @MainActor class MetroSystemManager: ObservableObject {
     @Published var metroSystems = [MetroSystem]()
+    var countries: [String] {
+        let countries = metroSystems.map(\.country)
+        let countrySet = Set(countries)
+        return countrySet.sorted()
+    }
     func loadData() {
         let dataURL = Bundle.main.url(forResource: "data", withExtension: "csv")!
         let stringData = try! String(contentsOf: dataURL)
