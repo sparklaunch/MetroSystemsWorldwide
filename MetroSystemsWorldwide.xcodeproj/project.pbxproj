@@ -14,6 +14,7 @@
 		90D345E92A385CB9009EA5A4 /* MetroSystemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D345E82A385CB9009EA5A4 /* MetroSystemManager.swift */; };
 		90D345EB2A385CE5009EA5A4 /* MetroSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D345EA2A385CE5009EA5A4 /* MetroSystem.swift */; };
 		90D345ED2A385D1C009EA5A4 /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 90D345EC2A385D1C009EA5A4 /* data.csv */; };
+		90D345EF2A397007009EA5A4 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D345EE2A397007009EA5A4 /* CategoryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		90D345E82A385CB9009EA5A4 /* MetroSystemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroSystemManager.swift; sourceTree = "<group>"; };
 		90D345EA2A385CE5009EA5A4 /* MetroSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroSystem.swift; sourceTree = "<group>"; };
 		90D345EC2A385D1C009EA5A4 /* data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
+		90D345EE2A397007009EA5A4 /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				90D345D92A385C2F009EA5A4 /* ContentView.swift */,
+				90D345EE2A397007009EA5A4 /* CategoryButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90D345EB2A385CE5009EA5A4 /* MetroSystem.swift in Sources */,
+				90D345EF2A397007009EA5A4 /* CategoryButton.swift in Sources */,
 				90D345DA2A385C2F009EA5A4 /* ContentView.swift in Sources */,
 				90D345E92A385CB9009EA5A4 /* MetroSystemManager.swift in Sources */,
 				90D345D82A385C2F009EA5A4 /* MetroSystemsWorldwideApp.swift in Sources */,

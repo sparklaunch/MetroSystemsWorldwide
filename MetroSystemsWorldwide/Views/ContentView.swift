@@ -10,13 +10,38 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject private var metroSystemManager: MetroSystemManager
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            ScrollView {
+                VStack(alignment: .leading) {
+                    VStack(alignment: .leading) {
+                        Text("Search by…")
+                            .font(.title.bold())
+                            .padding(.horizontal, 20)
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                NavigationLink {
+
+                                } label: {
+                                    CategoryButton(label: "Country", systemName: "globe.asia.australia.fill", color: .blue)
+                                }
+                                NavigationLink {
+
+                                } label: {
+                                    CategoryButton(label: "City", systemName: "building.2.crop.circle.fill", color: .green)
+                                }
+                                NavigationLink {
+
+                                } label: {
+                                    CategoryButton(label: "Name", systemName: "tram.circle.fill", color: .yellow)
+                                }
+                            }
+                            .padding(.horizontal, 20)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Hello, Passengers.")
         }
-        .padding()
     }
 }
 
