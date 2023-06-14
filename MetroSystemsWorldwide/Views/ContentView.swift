@@ -24,7 +24,7 @@ struct ContentView: View {
                                     CategoryButton(label: "Country", systemName: "globe.asia.australia.fill", color: .blue)
                                 }
                                 NavigationLink {
-
+                                    CityView()
                                 } label: {
                                     CategoryButton(label: "City", systemName: "building.2.crop.circle.fill", color: .green)
                                 }

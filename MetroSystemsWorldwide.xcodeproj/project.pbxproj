@@ -17,6 +17,8 @@
 		90D345EF2A397007009EA5A4 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D345EE2A397007009EA5A4 /* CategoryButton.swift */; };
 		90D345F12A39741C009EA5A4 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D345F02A39741C009EA5A4 /* CountryView.swift */; };
 		90D345F42A39775E009EA5A4 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D345F32A39775E009EA5A4 /* CountryViewModel.swift */; };
+		90D345F62A397B04009EA5A4 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D345F52A397B04009EA5A4 /* CityView.swift */; };
+		90D345F82A397B21009EA5A4 /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D345F72A397B21009EA5A4 /* CityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		90D345EE2A397007009EA5A4 /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		90D345F02A39741C009EA5A4 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
 		90D345F32A39775E009EA5A4 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
+		90D345F52A397B04009EA5A4 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
+		90D345F72A397B21009EA5A4 /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 				90D345D92A385C2F009EA5A4 /* ContentView.swift */,
 				90D345EE2A397007009EA5A4 /* CategoryButton.swift */,
 				90D345F02A39741C009EA5A4 /* CountryView.swift */,
+				90D345F52A397B04009EA5A4 /* CityView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				90D345F32A39775E009EA5A4 /* CountryViewModel.swift */,
+				90D345F72A397B21009EA5A4 /* CityViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -187,7 +193,9 @@
 				90D345DA2A385C2F009EA5A4 /* ContentView.swift in Sources */,
 				90D345F12A39741C009EA5A4 /* CountryView.swift in Sources */,
 				90D345E92A385CB9009EA5A4 /* MetroSystemManager.swift in Sources */,
+				90D345F62A397B04009EA5A4 /* CityView.swift in Sources */,
 				90D345F42A39775E009EA5A4 /* CountryViewModel.swift in Sources */,
+				90D345F82A397B21009EA5A4 /* CityViewModel.swift in Sources */,
 				90D345D82A385C2F009EA5A4 /* MetroSystemsWorldwideApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

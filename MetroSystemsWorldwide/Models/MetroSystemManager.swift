@@ -14,7 +14,12 @@ import SwiftUI
         let countrySet = Set(countries)
         return countrySet.sorted()
     }
-    func loadData() {
+    var cities: [String] {
+        let cities = metroSystems.map(\.city)
+        let citySet = Set(cities)
+        return citySet.sorted()
+    }
+    private func loadData() {
         let dataURL = Bundle.main.url(forResource: "data", withExtension: "csv")!
         let stringData = try! String(contentsOf: dataURL)
         let separatedData = stringData.components(separatedBy: "\n").dropLast()
