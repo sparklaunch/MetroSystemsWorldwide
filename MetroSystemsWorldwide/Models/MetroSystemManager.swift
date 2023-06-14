@@ -19,6 +19,10 @@ import SwiftUI
         let citySet = Set(cities)
         return citySet.sorted()
     }
+    var names: [String] {
+        let names = metroSystems.map(\.name)
+        return names.sorted()
+    }
     private func loadData() {
         let dataURL = Bundle.main.url(forResource: "data", withExtension: "csv")!
         let stringData = try! String(contentsOf: dataURL)

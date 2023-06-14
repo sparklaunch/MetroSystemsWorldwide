@@ -29,7 +29,7 @@ struct ContentView: View {
                                     CategoryButton(label: "City", systemName: "building.2.crop.circle.fill", color: .green)
                                 }
                                 NavigationLink {
-
+                                    NameView()
                                 } label: {
                                     CategoryButton(label: "Name", systemName: "tram.circle.fill", color: .yellow)
                                 }
