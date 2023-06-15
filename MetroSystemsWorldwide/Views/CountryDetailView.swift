@@ -23,7 +23,18 @@ struct CountryDetailView: View {
                 }
             }
         }
-        .navigationTitle("Metro Systems in \(country)")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                VStack {
+                    Text("Metro Systems in")
+                        .font(.subheadline.bold())
+                        .foregroundColor(.secondary)
+                    Text(country)
+                        .font(.headline.bold())
+                }
+            }
+        }
     }
 }
 
