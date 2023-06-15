@@ -13,10 +13,10 @@ struct CountryDetailView: View {
     var body: some View {
         List(metroSystemManager.metroSystems(in: country)) { metroSystem in
             NavigationLink(metroSystem.name) {
-                
+                MetroSystemView(metroSystem: metroSystem)
             }
         }
-        .navigationTitle("Metro systems in \(country)")
+        .navigationTitle("Metro Systems in \(country)")
     }
 }
 

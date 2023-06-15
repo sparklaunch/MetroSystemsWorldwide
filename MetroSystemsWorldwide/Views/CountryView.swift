@@ -12,8 +12,21 @@ struct CountryView: View {
     @StateObject private var viewModel = ViewModel()
     var body: some View {
         List(viewModel.filteringCountries(metroSystemManager.countries), id: \.self) { country in
-            NavigationLink(country) {
+            NavigationLink {
                 CountryDetailView(country: country)
+            } label: {
+                HStack(spacing: 10) {
+                    Image(country.replacingOccurrences(of: " ", with: ""))
+                        .resizable()
+                        .frame(width: 60, height: 40)
+                    VStack(alignment: .leading) {
+                        Text(country)
+                        Text("^[\(metroSystemManager.metroSystems(in: country).count) Metro \("System")](inflect: true)")
+                            .font(.callout)
+                            .foregroundColor(.secondary)
+                    }
+                }
+                .padding(.vertical, 5)
             }
         }
         .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
