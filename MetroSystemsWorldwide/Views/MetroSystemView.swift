@@ -10,10 +10,19 @@ import SwiftUI
 struct MetroSystemView: View {
     let metroSystem: MetroSystem
     var body: some View {
-        VStack {
-
+        ScrollView {
+            VStack(alignment: .leading) {
+                Image(metroSystem.name.replacingOccurrences(of: " ", with: ""))
+                    .resizable()
+                    .scaledToFit()
+                VStack(alignment: .leading) {
+                    Text(metroSystem.name)
+                        .font(.largeTitle.bold())
+                }
+                .padding()
+            }
         }
-        .navigationTitle(metroSystem.name)
+        .ignoresSafeArea(.all)
     }
 }
 

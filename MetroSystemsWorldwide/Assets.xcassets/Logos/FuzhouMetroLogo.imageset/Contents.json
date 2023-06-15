@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "FuzhouMetroLogo.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

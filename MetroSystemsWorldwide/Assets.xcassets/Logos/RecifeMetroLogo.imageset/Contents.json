@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "RecifeMetroLogo.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

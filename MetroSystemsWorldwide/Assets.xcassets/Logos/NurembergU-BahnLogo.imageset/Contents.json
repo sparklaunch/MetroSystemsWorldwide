@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "NurembergU-BahnLogo.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "DelhiMetroLogo.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

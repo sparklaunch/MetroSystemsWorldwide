@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "AstramLineLogo.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

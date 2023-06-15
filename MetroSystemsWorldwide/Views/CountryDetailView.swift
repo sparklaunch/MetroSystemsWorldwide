@@ -12,8 +12,15 @@ struct CountryDetailView: View {
     let country: String
     var body: some View {
         List(metroSystemManager.metroSystems(in: country)) { metroSystem in
-            NavigationLink(metroSystem.name) {
+            NavigationLink {
                 MetroSystemView(metroSystem: metroSystem)
+            } label: {
+                HStack(spacing: 10) {
+                    Image("\(metroSystem.name.replacingOccurrences(of: " ", with: ""))Logo")
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                    Text(metroSystem.name)
+                }
             }
         }
         .navigationTitle("Metro Systems in \(country)")
