@@ -12,7 +12,9 @@ struct CountryView: View {
     @StateObject private var viewModel = ViewModel()
     var body: some View {
         List(viewModel.filteringCountries(metroSystemManager.countries), id: \.self) { country in
-            Text(country)
+            NavigationLink(country) {
+                CountryDetailView(country: country)
+            }
         }
         .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
         .navigationTitle("Search by countries (\(viewModel.filteringCountries(metroSystemManager.countries).count))")

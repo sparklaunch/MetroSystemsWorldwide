@@ -46,6 +46,13 @@ import SwiftUI
         }
         self.metroSystems = metroSystems
     }
+    func metroSystems(in country: String) -> [MetroSystem] {
+        metroSystems.filter { metroSystem in
+            metroSystem.country == country
+        }.sorted {
+            $0.name < $1.name
+        }
+    }
     init() {
         loadData()
     }
