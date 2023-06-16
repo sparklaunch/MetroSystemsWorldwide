@@ -10,12 +10,18 @@ import SwiftUI
 struct CityView: View {
     @EnvironmentObject private var metroSystemManager: MetroSystemManager
     @StateObject private var viewModel = ViewModel()
+    private var filteredCities: [String] {
+        viewModel.filteringCities(metroSystemManager.cities)
+    }
+    private var filteredCitiesCount: Int {
+        filteredCities.count
+    }
     var body: some View {
-        List(viewModel.filteringCities(metroSystemManager.cities), id: \.self) { city in
+        List(filteredCities, id: \.self) { city in
             Text(city)
         }
         .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
-        .navigationTitle("Search by cities (\(viewModel.filteringCities(metroSystemManager.cities).count))")
+        .navigationTitle("Search by cities (\(filteredCitiesCount))")
     }
 }
 

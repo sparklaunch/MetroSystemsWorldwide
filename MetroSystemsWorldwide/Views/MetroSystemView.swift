@@ -12,7 +12,7 @@ struct MetroSystemView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                Image(metroSystem.name.replacingOccurrences(of: " ", with: ""))
+                Image(metroSystem.name.removingSpaces())
                     .resizable()
                     .scaledToFit()
                 VStack(alignment: .leading, spacing: 10) {
@@ -20,7 +20,7 @@ struct MetroSystemView: View {
                         .font(.largeTitle.bold())
                     HStack(spacing: 10) {
                         Text("Country: \(metroSystem.country).")
-                        Image(metroSystem.country)
+                        Image(metroSystem.country.removingSpaces())
                             .resizable()
                             .frame(width: 40, height: 30)
                     }

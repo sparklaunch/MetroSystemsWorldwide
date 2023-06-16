@@ -10,13 +10,19 @@ import SwiftUI
 struct CountryView: View {
     @EnvironmentObject private var metroSystemManager: MetroSystemManager
     @StateObject private var viewModel = ViewModel()
+    private var filteredCountries: [String] {
+        viewModel.filteringCountries(metroSystemManager.countries)
+    }
+    private var filteredCountriesCount: Int {
+        filteredCountries.count
+    }
     var body: some View {
-        List(viewModel.filteringCountries(metroSystemManager.countries), id: \.self) { country in
+        List(filteredCountries, id: \.self) { country in
             NavigationLink {
                 CountryDetailView(country: country)
             } label: {
                 HStack(spacing: 10) {
-                    Image(country.replacingOccurrences(of: " ", with: ""))
+                    Image(country.removingSpaces())
                         .resizable()
                         .frame(width: 60, height: 40)
                     VStack(alignment: .leading) {
@@ -30,7 +36,7 @@ struct CountryView: View {
             }
         }
         .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
-        .navigationTitle("Search by countries (\(viewModel.filteringCountries(metroSystemManager.countries).count))")
+        .navigationTitle("Search by countries (\(filteredCountriesCount))")
         .navigationBarTitleDisplayMode(.inline)
     }
 }

@@ -16,7 +16,7 @@ struct CountryDetailView: View {
                 MetroSystemView(metroSystem: metroSystem)
             } label: {
                 HStack(spacing: 10) {
-                    Image("\(metroSystem.name.replacingOccurrences(of: " ", with: ""))Logo")
+                    Image("\(metroSystem.name.removingSpaces())Logo")
                         .resizable()
                         .frame(width: 40, height: 40)
                     Text(metroSystem.name)

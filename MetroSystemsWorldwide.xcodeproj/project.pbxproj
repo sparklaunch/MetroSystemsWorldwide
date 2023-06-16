@@ -23,6 +23,7 @@
 		90D345FC2A397CAF009EA5A4 /* NameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D345FB2A397CAF009EA5A4 /* NameViewModel.swift */; };
 		90D346212A3AC4A0009EA5A4 /* CountryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D346202A3AC4A0009EA5A4 /* CountryDetailView.swift */; };
 		90D346232A3AC680009EA5A4 /* MetroSystemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D346222A3AC680009EA5A4 /* MetroSystemView.swift */; };
+		90D346262A3C4918009EA5A4 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D346252A3C4918009EA5A4 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		90D345FB2A397CAF009EA5A4 /* NameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewModel.swift; sourceTree = "<group>"; };
 		90D346202A3AC4A0009EA5A4 /* CountryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailView.swift; sourceTree = "<group>"; };
 		90D346222A3AC680009EA5A4 /* MetroSystemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroSystemView.swift; sourceTree = "<group>"; };
+		90D346252A3C4918009EA5A4 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		90D345D62A385C2F009EA5A4 /* MetroSystemsWorldwide */ = {
 			isa = PBXGroup;
 			children = (
+				90D346242A3C490E009EA5A4 /* Utilities */,
 				90D345F22A397751009EA5A4 /* ViewModels */,
 				90D345E72A385C9F009EA5A4 /* Models */,
 				90D345E62A385C44009EA5A4 /* Views */,
@@ -127,6 +130,14 @@
 				90D345FB2A397CAF009EA5A4 /* NameViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		90D346242A3C490E009EA5A4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				90D346252A3C4918009EA5A4 /* StringExtension.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +219,7 @@
 				90D345FC2A397CAF009EA5A4 /* NameViewModel.swift in Sources */,
 				90D345F12A39741C009EA5A4 /* CountryView.swift in Sources */,
 				90D345E92A385CB9009EA5A4 /* MetroSystemManager.swift in Sources */,
+				90D346262A3C4918009EA5A4 /* StringExtension.swift in Sources */,
 				90D345F62A397B04009EA5A4 /* CityView.swift in Sources */,
 				90D345F42A39775E009EA5A4 /* CountryViewModel.swift in Sources */,
 				90D345FA2A397C8B009EA5A4 /* NameView.swift in Sources */,
