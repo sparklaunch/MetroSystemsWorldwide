@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "DubaiMetro.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
