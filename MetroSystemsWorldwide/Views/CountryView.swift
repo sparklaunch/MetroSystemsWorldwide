@@ -31,6 +31,7 @@ struct CountryView: View {
         }
         .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
         .navigationTitle("Search by countries (\(viewModel.filteringCountries(metroSystemManager.countries).count))")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

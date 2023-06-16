@@ -15,9 +15,20 @@ struct MetroSystemView: View {
                 Image(metroSystem.name.replacingOccurrences(of: " ", with: ""))
                     .resizable()
                     .scaledToFit()
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 10) {
                     Text(metroSystem.name)
                         .font(.largeTitle.bold())
+                    HStack(spacing: 10) {
+                        Text("Country: \(metroSystem.country).")
+                        Image(metroSystem.country)
+                            .resizable()
+                            .frame(width: 40, height: 30)
+                    }
+                    Text("First Opened: \(metroSystem.firstOpened).")
+                    Text("Last Expanded: \(metroSystem.lastExpanded ?? "N/A").")
+                    Text("Number of Stations: \(metroSystem.numberOfStations).")
+                    Text("Total Length: \(metroSystem.totalLength).")
+                    Text("Annual Ridership (Million): \(metroSystem.annualRidership ?? "N/A").")
                 }
                 .padding()
             }
