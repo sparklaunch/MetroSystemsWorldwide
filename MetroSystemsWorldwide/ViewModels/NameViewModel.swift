@@ -10,12 +10,13 @@ import SwiftUI
 extension NameView {
     @MainActor class ViewModel: ObservableObject {
         @Published var searchText = ""
-        func filteringNames(_ names: [String]) -> [String] {
+        @Published var metroSystems: [MetroSystem] = []
+        func filteringMetroSystems() -> [MetroSystem] {
             if searchText.isEmpty {
-                return names
+                return metroSystems
             }
-            return names.filter { name in
-                name.localizedCaseInsensitiveContains(searchText)
+            return metroSystems.filter { metroSystem in
+                metroSystem.name.localizedCaseInsensitiveContains(searchText)
             }
         }
     }

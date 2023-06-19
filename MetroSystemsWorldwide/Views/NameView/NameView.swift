@@ -10,18 +10,19 @@ import SwiftUI
 struct NameView: View {
     @EnvironmentObject private var metroSystemManager: MetroSystemManager
     @StateObject private var viewModel = ViewModel()
-    private var filteredNames: [String] {
-        viewModel.filteringNames(metroSystemManager.names)
-    }
-    private var filteredNamesCount: Int {
-        filteredNames.count
-    }
     var body: some View {
-        List(filteredNames, id: \.self) { name in
-            Text(name)
+        List(viewModel.filteringMetroSystems()) { metroSystem in
+            NavigationLink {
+                MetroSystemView(metroSystem: metroSystem)
+            } label: {
+                MetroSystemRow(name: metroSystem.name)
+            }
         }
         .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
-        .navigationTitle("Search by names (\(filteredNamesCount))")
+        .navigationTitle("Search by names (\(viewModel.filteringMetroSystems().count))")
+        .onAppear {
+            viewModel.metroSystems = metroSystemManager.metroSystems
+        }
     }
 }
 

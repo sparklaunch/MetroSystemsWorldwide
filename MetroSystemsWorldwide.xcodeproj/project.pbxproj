@@ -107,11 +107,11 @@
 		90D345E62A385C44009EA5A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				90D3462F2A402274009EA5A4 /* NameView */,
 				90D3462A2A401D48009EA5A4 /* CityView */,
 				90D346292A401D3C009EA5A4 /* CountryView */,
 				90D345D92A385C2F009EA5A4 /* ContentView.swift */,
 				90D345EE2A397007009EA5A4 /* CategoryButton.swift */,
-				90D345F92A397C8B009EA5A4 /* NameView.swift */,
 				90D346222A3AC680009EA5A4 /* MetroSystemView.swift */,
 				90D3462D2A402048009EA5A4 /* MetroSystemRow.swift */,
 			);
@@ -163,6 +163,14 @@
 				90D345F52A397B04009EA5A4 /* CityView.swift */,
 			);
 			path = CityView;
+			sourceTree = "<group>";
+		};
+		90D3462F2A402274009EA5A4 /* NameView */ = {
+			isa = PBXGroup;
+			children = (
+				90D345F92A397C8B009EA5A4 /* NameView.swift */,
+			);
+			path = NameView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
