@@ -41,6 +41,7 @@ struct ContentView: View {
             }
             .navigationTitle("Hello, Passengers.")
         }
+        .navigationViewStyle(.stack)
     }
 }
 

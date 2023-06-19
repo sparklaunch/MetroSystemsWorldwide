@@ -14,7 +14,9 @@ struct MetroSystemView: View {
             VStack(alignment: .leading) {
                 Image(metroSystem.name.removingSpaces())
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFill()
+                    .frame(maxWidth: .infinity, maxHeight: 300, alignment: .center)
+                    .clipped()
                 VStack(alignment: .leading, spacing: 10) {
                     Text(metroSystem.name)
                         .font(.largeTitle.bold())
