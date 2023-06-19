@@ -18,7 +18,9 @@ struct CityView: View {
     }
     var body: some View {
         List(filteredCities, id: \.self) { city in
-            Text(city)
+            NavigationLink(city) {
+                CityDetailView(city: city)
+            }
         }
         .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
         .navigationTitle("Search by cities (\(filteredCitiesCount))")

@@ -27,7 +27,7 @@ struct CountryView: View {
                         .frame(width: 60, height: 40)
                     VStack(alignment: .leading) {
                         Text(country)
-                        Text("^[\(metroSystemManager.metroSystems(in: country).count) Metro \("System")](inflect: true)")
+                        Text("^[\(metroSystemManager.metroSystemsIn(country: country).count) Metro \("System")](inflect: true)")
                             .font(.callout)
                             .foregroundColor(.secondary)
                     }

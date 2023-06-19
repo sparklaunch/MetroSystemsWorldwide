@@ -11,16 +11,11 @@ struct CountryDetailView: View {
     @EnvironmentObject private var metroSystemManager: MetroSystemManager
     let country: String
     var body: some View {
-        List(metroSystemManager.metroSystems(in: country)) { metroSystem in
+        List(metroSystemManager.metroSystemsIn(country: country)) { metroSystem in
             NavigationLink {
                 MetroSystemView(metroSystem: metroSystem)
             } label: {
-                HStack(spacing: 10) {
-                    Image("\(metroSystem.name.removingSpaces())Logo")
-                        .resizable()
-                        .frame(width: 40, height: 40)
-                    Text(metroSystem.name)
-                }
+                MetroSystemRow(name: metroSystem.name)
             }
         }
         .navigationBarTitleDisplayMode(.inline)

@@ -46,9 +46,16 @@ import SwiftUI
         }
         self.metroSystems = metroSystems
     }
-    func metroSystems(in country: String) -> [MetroSystem] {
+    func metroSystemsIn(country: String) -> [MetroSystem] {
         metroSystems.filter { metroSystem in
             metroSystem.country == country
+        }.sorted {
+            $0.name < $1.name
+        }
+    }
+    func metroSystemsIn(city: String) -> [MetroSystem] {
+        metroSystems.filter { metroSystem in
+            metroSystem.city == city
         }.sorted {
             $0.name < $1.name
         }
