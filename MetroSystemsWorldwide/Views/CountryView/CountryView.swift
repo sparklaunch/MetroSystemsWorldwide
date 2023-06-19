@@ -21,19 +21,7 @@ struct CountryView: View {
             NavigationLink {
                 CountryDetailView(country: country)
             } label: {
-                HStack(spacing: 10) {
-                    Image(country.removingSpaces())
-                        .resizable()
-                        .frame(width: 60, height: 40)
-                    VStack(alignment: .leading) {
-                        Text(country)
-                        Text("^[\(metroSystemManager.metroSystemsIn(country: country).count) Metro \("System")](inflect: true)")
-                            .font(.callout)
-                            .foregroundColor(.secondary)
-                    }
-                }
-                .padding(.vertical, 5)
-            }
+                CountryRow(countryName: country, numberOfMetroSystems: metroSystemManager.metroSystemsIn(country: country).count)            }
         }
         .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
         .navigationTitle("Search by countries (\(filteredCountriesCount))")

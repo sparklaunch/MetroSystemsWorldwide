@@ -27,6 +27,7 @@
 		90D346282A401D05009EA5A4 /* CityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D346272A401D05009EA5A4 /* CityDetailView.swift */; };
 		90D3462C2A401E3A009EA5A4 /* CityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3462B2A401E3A009EA5A4 /* CityDetailViewModel.swift */; };
 		90D3462E2A402048009EA5A4 /* MetroSystemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3462D2A402048009EA5A4 /* MetroSystemRow.swift */; };
+		90D346332A4027E9009EA5A4 /* CountryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D346322A4027E9009EA5A4 /* CountryRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		90D346272A401D05009EA5A4 /* CityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailView.swift; sourceTree = "<group>"; };
 		90D3462B2A401E3A009EA5A4 /* CityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewModel.swift; sourceTree = "<group>"; };
 		90D3462D2A402048009EA5A4 /* MetroSystemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroSystemRow.swift; sourceTree = "<group>"; };
+		90D346322A4027E9009EA5A4 /* CountryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				90D345EE2A397007009EA5A4 /* CategoryButton.swift */,
 				90D346222A3AC680009EA5A4 /* MetroSystemView.swift */,
 				90D3462D2A402048009EA5A4 /* MetroSystemRow.swift */,
+				90D346322A4027E9009EA5A4 /* CountryRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				90D345F42A39775E009EA5A4 /* CountryViewModel.swift in Sources */,
 				90D3462C2A401E3A009EA5A4 /* CityDetailViewModel.swift in Sources */,
 				90D345FA2A397C8B009EA5A4 /* NameView.swift in Sources */,
+				90D346332A4027E9009EA5A4 /* CountryRow.swift in Sources */,
 				90D345F82A397B21009EA5A4 /* CityViewModel.swift in Sources */,
 				90D345D82A385C2F009EA5A4 /* MetroSystemsWorldwideApp.swift in Sources */,
 			);
