@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MetroSystemView: View {
+    @EnvironmentObject private var favoritesManager: FavoritesManager
     let metroSystem: MetroSystem
     var body: some View {
         ScrollView {
@@ -18,8 +19,27 @@ struct MetroSystemView: View {
                     .frame(maxWidth: .infinity, maxHeight: 300, alignment: .center)
                     .clipped()
                 VStack(alignment: .leading, spacing: 10) {
-                    Text(metroSystem.name)
-                        .font(.largeTitle.bold())
+                    HStack {
+                        Text(metroSystem.name)
+                            .font(.largeTitle.bold())
+                        Spacer()
+                        if favoritesManager.hasFavorite(metroSystem) {
+                            Button {
+                                favoritesManager.removeFromFavorites(metroSystem)
+                            } label: {
+                                Image(systemName: "star.fill")
+                                    .imageScale(.large)
+                            }
+                        } else {
+                            Button {
+                                favoritesManager.addToFavorites(metroSystem)
+                            } label: {
+                                Image(systemName: "star")
+                                    .imageScale(.large)
+                            }
+                        }
+
+                    }
                     HStack(spacing: 10) {
                         Text("Country: \(metroSystem.country).")
                         Image(metroSystem.country.removingSpaces())
@@ -42,5 +62,6 @@ struct MetroSystemView: View {
 struct MetroSystemView_Previews: PreviewProvider {
     static var previews: some View {
         MetroSystemView(metroSystem: MetroSystem.example)
+            .environmentObject(FavoritesManager())
     }
 }

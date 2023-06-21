@@ -10,10 +10,12 @@ import SwiftUI
 @main
 struct MetroSystemsWorldwideApp: App {
     @StateObject private var metroSystemManager = MetroSystemManager()
+    @StateObject private var favoritesManager = FavoritesManager()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
                 .environmentObject(metroSystemManager)
+                .environmentObject(favoritesManager)
         }
     }
 }

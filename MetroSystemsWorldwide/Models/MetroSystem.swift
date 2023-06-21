@@ -19,3 +19,15 @@ struct MetroSystem: Identifiable {
     let totalLength: String
     let annualRidership: String?
 }
+
+extension MetroSystem: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
+extension MetroSystem: Comparable {
+    static func <(lhs: MetroSystem, rhs: MetroSystem) -> Bool {
+        lhs.name < rhs.name
+    }
+}
