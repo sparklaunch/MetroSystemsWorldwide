@@ -22,6 +22,7 @@ struct CategoryButton: View {
                     .foregroundColor(.white)
                     .offset(x: 30, y: 30)
                          , alignment: .bottomTrailing)
+                .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
             Text(label)
                 .font(.title3.bold())
                 .foregroundColor(.white)

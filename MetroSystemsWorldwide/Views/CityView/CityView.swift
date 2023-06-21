@@ -23,6 +23,7 @@ struct CityView: View {
             }
         }
         .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
+        .autocorrectionDisabled()
         .navigationTitle("Search by cities (\(filteredCitiesCount))")
         .navigationBarTitleDisplayMode(.inline)
     }

@@ -21,9 +21,11 @@ struct CountryView: View {
             NavigationLink {
                 CountryDetailView(country: country)
             } label: {
-                CountryRow(countryName: country, numberOfMetroSystems: metroSystemManager.metroSystemsIn(country: country).count)            }
+                CountryRow(countryName: country, numberOfMetroSystems: metroSystemManager.metroSystemsIn(country: country).count)
+            }
         }
         .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
+        .autocorrectionDisabled()
         .navigationTitle("Search by countries (\(filteredCountriesCount))")
         .navigationBarTitleDisplayMode(.inline)
     }

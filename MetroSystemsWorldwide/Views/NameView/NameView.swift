@@ -19,6 +19,7 @@ struct NameView: View {
             }
         }
         .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
+        .autocorrectionDisabled()
         .navigationTitle("Search by names (\(viewModel.filteringMetroSystems().count))")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
