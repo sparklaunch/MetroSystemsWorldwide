@@ -8,6 +8,7 @@
 import SwiftUI
 
 @MainActor class FavoritesManager: ObservableObject {
+    private let key = "Favorites"
     @Published var _favorites = Set([MetroSystem]())
     var favorites: [MetroSystem] {
         get {
@@ -19,6 +20,7 @@ import SwiftUI
     }
     func addToFavorites(_ metroSystem: MetroSystem) {
         favorites.append(metroSystem)
+        save()
     }
     func hasFavorite(_ metroSystem: MetroSystem) -> Bool {
         favorites.contains(metroSystem)
@@ -26,6 +28,26 @@ import SwiftUI
     func removeFromFavorites(_ metroSystem: MetroSystem) {
         if let index = favorites.firstIndex(of: metroSystem) {
             favorites.remove(at: index)
+            save()
         }
+    }
+    func save() {
+        guard let encodedData = try? JSONEncoder().encode(favorites) else {
+            fatalError("Failed to encode favorites.")
+        }
+        UserDefaults.standard.set(encodedData, forKey: key)
+    }
+    func load() {
+        if let encodedData = UserDefaults.standard.data(forKey: key) {
+            guard let decodedData = try? JSONDecoder().decode([MetroSystem].self, from: encodedData) else {
+                fatalError("Failed to decode favorites.")
+            }
+            favorites = decodedData
+        } else {
+            favorites = []
+        }
+    }
+    init() {
+        load()
     }
 }

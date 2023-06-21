@@ -7,8 +7,10 @@
 
 import SwiftUI
 
-struct MetroSystem: Identifiable {
-    let id = UUID()
+struct MetroSystem: Identifiable, Codable {
+    var id: String {
+        name
+    }
     static let example = MetroSystem(city: "Algiers", country: "Algeria", name: "Algiers Metro", firstOpened: "2011", lastExpanded: "2018", numberOfStations: "19", totalLength: "18.5 km (11.5 mi)", annualRidership: "45.3 (2019)")
     let city: String
     let country: String
