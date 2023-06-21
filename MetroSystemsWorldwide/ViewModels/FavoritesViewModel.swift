@@ -9,14 +9,14 @@ import SwiftUI
 
 extension FavoritesView {
     @MainActor class ViewModel: ObservableObject {
-        @Published var favorites: [MetroSystem] = []
         @Published var searchText = ""
-        var filteredFavorites: [MetroSystem] {
+        func filteringFavorites(_ favorites: [MetroSystem]) -> [MetroSystem] {
             if searchText.isEmpty {
                 return favorites
-            }
-            return favorites.filter { favorite in
-                favorite.name.localizedCaseInsensitiveContains(searchText)
+            } else {
+                return favorites.filter { favorite in
+                    favorite.name.localizedCaseInsensitiveContains(searchText)
+                }
             }
         }
     }

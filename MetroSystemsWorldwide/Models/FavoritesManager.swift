@@ -47,6 +47,10 @@ import SwiftUI
             favorites = []
         }
     }
+    func deleteFavorites(at offsets: IndexSet) {
+        favorites.remove(atOffsets: offsets)
+        save()
+    }
     init() {
         load()
     }

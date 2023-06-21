@@ -13,22 +13,23 @@ struct FavoritesView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.filteredFavorites) { favorite in
+                ForEach(viewModel.filteringFavorites(favoritesManager.favorites)) { favorite in
                     NavigationLink {
                         MetroSystemView(metroSystem: favorite)
                     } label: {
                         MetroSystemRow(name: favorite.name)
                     }
                 }
+                .onDelete(perform: favoritesManager.deleteFavorites)
             }
             .navigationTitle("Favorite Metro Systems")
             .searchable(text: $viewModel.searchText)
             .autocorrectionDisabled()
+            .toolbar {
+                EditButton()
+            }
         }
         .navigationViewStyle(.stack)
-        .onAppear {
-            viewModel.favorites = favoritesManager.favorites
-        }
     }
 }
 
