@@ -9,10 +9,11 @@ import SwiftUI
 
 struct FavoritesView: View {
     @EnvironmentObject private var favoritesManager: FavoritesManager
+    @StateObject private var viewModel = ViewModel()
     var body: some View {
         NavigationView {
             List {
-                ForEach(favoritesManager.favorites) { favorite in
+                ForEach(viewModel.filteredFavorites) { favorite in
                     NavigationLink {
                         MetroSystemView(metroSystem: favorite)
                     } label: {
@@ -21,8 +22,13 @@ struct FavoritesView: View {
                 }
             }
             .navigationTitle("Favorite Metro Systems")
+            .searchable(text: $viewModel.searchText)
+            .autocorrectionDisabled()
         }
         .navigationViewStyle(.stack)
+        .onAppear {
+            viewModel.favorites = favoritesManager.favorites
+        }
     }
 }
 
