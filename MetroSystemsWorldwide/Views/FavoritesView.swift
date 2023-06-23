@@ -21,13 +21,13 @@ struct FavoritesView: View {
                     }
                 }
                 .onDelete(perform: favoritesManager.deleteFavorites)
+                .toolbar {
+                    EditButton()
+                }
             }
             .navigationTitle("Favorite Metro Systems")
             .searchable(text: $viewModel.searchText)
             .autocorrectionDisabled()
-            .toolbar {
-                EditButton()
-            }
         }
         .navigationViewStyle(.stack)
     }
