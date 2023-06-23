@@ -62,6 +62,7 @@
 		90D346362A42E49A009EA5A4 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		90D346382A42E53E009EA5A4 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 		90D3463A2A42EC01009EA5A4 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		90E15F672A464721005AE480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 		90D345D62A385C2F009EA5A4 /* MetroSystemsWorldwide */ = {
 			isa = PBXGroup;
 			children = (
+				90E15F672A464721005AE480 /* Info.plist */,
 				90D346242A3C490E009EA5A4 /* Utilities */,
 				90D345F22A397751009EA5A4 /* ViewModels */,
 				90D345E72A385C9F009EA5A4 /* Models */,
@@ -409,6 +411,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MetroSystemsWorldwide/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Metro Systems Worldwide";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -451,6 +454,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MetroSystemsWorldwide/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Metro Systems Worldwide";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
