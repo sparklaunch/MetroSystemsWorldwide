@@ -9,7 +9,7 @@ import SwiftUI
 
 @MainActor class FavoritesManager: ObservableObject {
     private let key = "Favorites"
-    @Published var _favorites = Set([MetroSystem]())
+    @Published private var _favorites = Set([MetroSystem]())
     var favorites: [MetroSystem] {
         get {
             _favorites.sorted()
