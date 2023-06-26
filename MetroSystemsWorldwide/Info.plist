@@ -8,8 +8,6 @@
 		<string>primary</string>
 		<key>UIImageName</key>
 		<string>BusanMetroLogo</string>
-		<key>UIImageRespectsSafeAreaInsets</key>
-		<true/>
 	</dict>
 </dict>
 </plist>
