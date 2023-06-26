@@ -31,7 +31,6 @@
 		90D346352A42E426009EA5A4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D346342A42E426009EA5A4 /* MainView.swift */; };
 		90D346372A42E49A009EA5A4 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D346362A42E49A009EA5A4 /* FavoritesView.swift */; };
 		90D346392A42E53E009EA5A4 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D346382A42E53E009EA5A4 /* FavoritesManager.swift */; };
-		90D3463B2A42EC01009EA5A4 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3463A2A42EC01009EA5A4 /* FavoritesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +60,6 @@
 		90D346342A42E426009EA5A4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		90D346362A42E49A009EA5A4 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		90D346382A42E53E009EA5A4 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
-		90D3463A2A42EC01009EA5A4 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		90E15F672A464721005AE480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,7 +149,6 @@
 				90D345F72A397B21009EA5A4 /* CityViewModel.swift */,
 				90D345FB2A397CAF009EA5A4 /* NameViewModel.swift */,
 				90D3462B2A401E3A009EA5A4 /* CityDetailViewModel.swift */,
-				90D3463A2A42EC01009EA5A4 /* FavoritesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -273,7 +270,6 @@
 				90D345FC2A397CAF009EA5A4 /* NameViewModel.swift in Sources */,
 				90D346392A42E53E009EA5A4 /* FavoritesManager.swift in Sources */,
 				90D345F12A39741C009EA5A4 /* CountryView.swift in Sources */,
-				90D3463B2A42EC01009EA5A4 /* FavoritesViewModel.swift in Sources */,
 				90D345E92A385CB9009EA5A4 /* MetroSystemManager.swift in Sources */,
 				90D346262A3C4918009EA5A4 /* StringExtension.swift in Sources */,
 				90D345F62A397B04009EA5A4 /* CityView.swift in Sources */,

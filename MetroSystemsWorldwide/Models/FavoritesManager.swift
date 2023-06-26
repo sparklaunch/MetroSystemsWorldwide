@@ -18,6 +18,15 @@ import SwiftUI
             _favorites = Set(newValue)
         }
     }
+    func filteredFavorites(with searchText: String) -> [MetroSystem] {
+        if searchText.isEmpty {
+            return favorites
+        } else {
+            return favorites.filter { favorite in
+                favorite.name.localizedCaseInsensitiveContains(searchText)
+            }
+        }
+    }
     func addToFavorites(_ metroSystem: MetroSystem) {
         favorites.append(metroSystem)
         save()

@@ -9,11 +9,11 @@ import SwiftUI
 
 struct FavoritesView: View {
     @EnvironmentObject private var favoritesManager: FavoritesManager
-    @StateObject private var viewModel = ViewModel()
+    @State private var searchText = ""
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.filteringFavorites(favoritesManager.favorites)) { favorite in
+                ForEach(favoritesManager.filteredFavorites(with: searchText)) { favorite in
                     NavigationLink {
                         MetroSystemView(metroSystem: favorite)
                     } label: {
@@ -21,12 +21,9 @@ struct FavoritesView: View {
                     }
                 }
                 .onDelete(perform: favoritesManager.deleteFavorites)
-                .toolbar {
-                    EditButton()
-                }
             }
             .navigationTitle("Favorite Metro Systems")
-            .searchable(text: $viewModel.searchText)
+            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
             .autocorrectionDisabled()
         }
         .navigationViewStyle(.stack)
